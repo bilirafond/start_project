@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rango</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'test_many/css/my_css.css' %}">
+</head>
+<body>
+	<h1>Форма регистрации</h1>
+	<div class="SearchHotel" style="width:1140px; border: 1px solid yellow">
+		<form id="RegistrationForm" action="#">
+		{% for field in form %}
+			<div class="{{ field.name }}">
+				{{ field.label_tag }} {{ field }}
+			</div>
+		{% endfor %}
+			<input type="submit" value="Продолжить" />
+		</form>
+	</div>
+</body>
+</html>
